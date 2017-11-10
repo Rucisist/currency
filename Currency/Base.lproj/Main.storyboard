@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Currency" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iQ2-2L-y2d">
+                                <rect key="frame" x="0.0" y="40" width="375" height="216"/>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d7d-ed-fdv">
+                                <rect key="frame" x="16" y="347" width="343" height="216"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Utm-rp-ob3">
+                                <rect key="frame" x="26" y="286" width="323" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="VU2-J8-OWh">
+                                <rect key="frame" x="177.5" y="287" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VU2-J8-OWh" firstAttribute="top" secondItem="iQ2-2L-y2d" secondAttribute="bottom" constant="31" id="2Bq-2P-CCr"/>
+                            <constraint firstItem="d7d-ed-fdv" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="5Vg-EA-XlU"/>
+                            <constraint firstItem="Utm-rp-ob3" firstAttribute="top" secondItem="iQ2-2L-y2d" secondAttribute="bottom" constant="30" id="Ddz-pU-6lQ"/>
+                            <constraint firstItem="d7d-ed-fdv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="G2h-go-u0m"/>
+                            <constraint firstItem="d7d-ed-fdv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="K3c-uu-R7g"/>
+                            <constraint firstAttribute="trailing" secondItem="iQ2-2L-y2d" secondAttribute="trailing" id="LNJ-Rz-bSp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="d7d-ed-fdv" secondAttribute="trailing" id="N7o-YD-5my"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Utm-rp-ob3" secondAttribute="trailing" constant="10" id="OLl-ek-bPf"/>
+                            <constraint firstItem="VU2-J8-OWh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rsg-f5-ros"/>
+                            <constraint firstItem="d7d-ed-fdv" firstAttribute="top" secondItem="VU2-J8-OWh" secondAttribute="bottom" constant="40" id="Tkx-CA-KJz"/>
+                            <constraint firstItem="iQ2-2L-y2d" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="bpe-Oc-Fqz"/>
+                            <constraint firstItem="Utm-rp-ob3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="g6G-W9-aPa"/>
+                            <constraint firstItem="iQ2-2L-y2d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hYI-6M-6hZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activity" destination="VU2-J8-OWh" id="Da7-bz-hI1"/>
+                        <outlet property="labelCur" destination="Utm-rp-ob3" id="6Mp-7T-yG3"/>
+                        <outlet property="pickerFrom" destination="iQ2-2L-y2d" id="Rdq-Yb-GMk"/>
+                        <outlet property="pickerTo" destination="d7d-ed-fdv" id="dfZ-EM-yYL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
