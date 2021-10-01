@@ -9,6 +9,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     
     let currincies = ["RON", "EUR", "MYR", "CAD", "DKK", "GBP", "PHP", "CZK", "PLN", "RUB", "JPY", "SGD", "BRL", "SEK", "USD", "HRK", "NZD", "HKD", "BGN", "TRY", "MXN", "HUF", "KRW", "NOK", "INR", "ILS", "IDR", "CHF", "THB", "CNY", "ZAR", "AUD"]
+    
+    var diff: [Int] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -49,17 +52,13 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         return currincies[row]
     }
 
-    
-    
-    
     func currencyExceptBase() -> [String]{
         var currenciesExceptBase = currincies
         currenciesExceptBase.remove(at: pickerFrom.selectedRow(inComponent: 0))
+        diff = self.getDiff(a: currenciesExceptBase.first ?? "", a1: "")
         
         return currenciesExceptBase
     }
-    
-    
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView === pickerFrom{
@@ -67,7 +66,6 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         }
         self.requestCurrentCurrencyRate()
     }
-
     
     func requestCurrentCurrencyRate(){
         let baseCurrencyIndex = self.pickerFrom.selectedRow(inComponent: 0)
@@ -88,11 +86,12 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
                     strongSelf.activity.stopAnimating()
                 }
             })
-            
         }
     }
-
     
+    func getDiff(a: String, a1: String) -> [Int] {
+        return CurrencyVM().getMinimumDifference(a: [a], b: [a1])
+    }
     
     func retrieveCurrencyRate (baseCurrency: String, toCurrency: String, completion: @escaping(String) -> Void){
         requestCurrencyRates(baseCurrency: baseCurrency){ [weak self] (data, error) in
