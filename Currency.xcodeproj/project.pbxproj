@@ -12,6 +12,7 @@
 		BFDE5DB61F6CED240000E45F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFDE5DB41F6CED240000E45F /* Main.storyboard */; };
 		BFDE5DB81F6CED240000E45F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFDE5DB71F6CED240000E45F /* Assets.xcassets */; };
 		BFDE5DBB1F6CED240000E45F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFDE5DB91F6CED240000E45F /* LaunchScreen.storyboard */; };
+		FE1632A72706E3E700E9D480 /* CurrencyV.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1632A62706E3E700E9D480 /* CurrencyV.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		BFDE5DB71F6CED240000E45F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFDE5DBA1F6CED240000E45F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFDE5DBC1F6CED240000E45F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE1632A62706E3E700E9D480 /* CurrencyV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyV.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				BFDE5DB01F6CED240000E45F /* AppDelegate.swift */,
 				BFDE5DB21F6CED240000E45F /* ViewController.swift */,
+				FE1632A62706E3E700E9D480 /* CurrencyV.swift */,
 				BFDE5DB41F6CED240000E45F /* Main.storyboard */,
 				BFDE5DB71F6CED240000E45F /* Assets.xcassets */,
 				BFDE5DB91F6CED240000E45F /* LaunchScreen.storyboard */,
@@ -105,6 +108,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -137,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFDE5DB31F6CED240000E45F /* ViewController.swift in Sources */,
+				FE1632A72706E3E700E9D480 /* CurrencyV.swift in Sources */,
 				BFDE5DB11F6CED240000E45F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +304,7 @@
 				BFDE5DC11F6CED240000E45F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
